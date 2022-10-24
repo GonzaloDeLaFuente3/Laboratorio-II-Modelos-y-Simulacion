@@ -47,7 +47,7 @@ function simularXDias(){
     const trCC = document.createElement('tr');
     trCC.innerHTML = `
     <td scope="row">CC: Consumo de los clientes en el año en el rango de horario de ${valorA.value} y ${valorB.value}</th>
-    <td>${consumoCliente.toFixed(2)}</td>
+    <td>${(consumoCliente).toFixed(2)}</td>
     `
     
     const trCMD = document.createElement('tr');
