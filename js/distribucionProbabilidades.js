@@ -56,13 +56,15 @@ function simularXDias(){
     <td scope="row">CMD: Cantidad de ventas realizadas en el año de "Mogul Dientes"</th>
     <td>${cmd}</td>
     `
-    
+
     contenedorTablaResultados.appendChild(trCO);
     contenedorTablaResultados.appendChild(trCC);
     contenedorTablaResultados.appendChild(trCMD);
 
     const resultados = document.createElement('div');
     resultados.innerHTML = `
+    
+    <h5 class="text-center">Distribuciones utilizadas: Poisson, Geométrica y Uniforme</h5> </br></br>
     <label class="col-form-label">RESULTADOS:</label> </br>
     <label class="col-form-label">En ${cantidadDias.value} dias se realizaron un total de
     ${cantidadOfertas} ofertas, hasta obtener la primer venta de "alfajor jorgito"</label> </br>
