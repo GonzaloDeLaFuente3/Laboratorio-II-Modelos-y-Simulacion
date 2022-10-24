@@ -2,6 +2,8 @@ const contenedor = document.getElementById('contenedor');
 const boton = document.getElementById('botonCalcular');
 const cantidad = document.getElementById('inputCantidad');
 
+let valoresUi = [];
+
 function calcular(){
     var iteracion=0;
 
@@ -23,6 +25,7 @@ function calcular(){
         <td>${AxXModM}</td>
         <td>${ui}</td>`
         
+        valoresUi.push(ui);
         contenedor.appendChild(tr);
         semilla = ni;
         
