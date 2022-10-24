@@ -45,9 +45,10 @@ function simularXDias(){
     `
 
     const trCC = document.createElement('tr');
+
     trCC.innerHTML = `
     <td scope="row">CC: Consumo de los clientes en el año en el rango de horario de ${valorA.value} y ${valorB.value}</th>
-    <td>${(consumoCliente).toFixed(2)}</td>
+    <td>${parseFloat(consumoCliente).toFixed(2)}</td>
     `
     
     const trCMD = document.createElement('tr');
@@ -59,6 +60,19 @@ function simularXDias(){
     contenedorTablaResultados.appendChild(trCO);
     contenedorTablaResultados.appendChild(trCC);
     contenedorTablaResultados.appendChild(trCMD);
+
+    const resultados = document.createElement('div');
+    resultados.innerHTML = `
+    <label class="col-form-label">RESULTADOS:</label> </br>
+    <label class="col-form-label">En ${cantidadDias.value} dias se realizaron un total de
+    ${cantidadOfertas} ofertas, hasta obtener la primer venta de "alfajor jorgito"</label> </br>
+    <label class="col-form-label">El consumo de los clientes en el rango horario de ${valorA.value} y ${valorB.value} en un año
+    fue de ${parseFloat(consumoCliente).toFixed(2)} horas</label> </br>
+    <label class="col-form-label">La cantidad de ventas realizadas en el año de "Mogul Dientes" fue de ${cmd}</label>
+    `
+    resultados.classList.add('text-center');
+
+    displayTablaR.appendChild(resultados);
 }
 
 
